@@ -9,7 +9,12 @@ def main():
     label1 = Label(menu_inicial,
                     text = "Título l",
                     fg = "black",
-                    font= "Verdana 20")
+                    font= "Verdana 20",
+                    height=4,
+                    width=8,
+                    anchor=E,
+                    bd=1,
+                    relief="solid")
     
     label1.pack()
 
