@@ -53,7 +53,14 @@ class Application():
         #Frame widget
         font = customtkinter.CTkFont(family="Roboto", size=16)
 
+        # variáveis que serão armazenas no registro do funcionário
+        nome = customtkinter.StringVar(janela)
+        # ...
        
+        def printnome():
+            print(nome.get())
+
+
         #Tela para cadastrar Funcionario
         def telaCadastrarFuncionario():
             frame.pack_forget()
@@ -70,7 +77,8 @@ class Application():
             
             nomeEntry = customtkinter.CTkEntry(master=frameFuncionario,
                                                       placeholder_text="Nome",
-                                                      width=300
+                                                      width=300,
+                                                      textvariable=nome,
                                                       ).place(x=25, y=40)
             
             
@@ -119,9 +127,6 @@ class Application():
                                                       width=300).place(x=25, y=440)
             
             
-            def printnome():
-                print(nomeEntry)
-
 
             saveFuncionario = customtkinter.CTkButton(master=frameFuncionario, 
                                          text="Cadastrar Funcionario", 
